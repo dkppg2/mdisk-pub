@@ -6,7 +6,7 @@ import time
 import pyrogram
 from pyrogram import Client
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup,InlineKeyboardButton, Message
 from ffmpeg.time_gap import check_time_gap
 from configs import Config
 import shutil
