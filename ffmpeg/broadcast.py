@@ -1,5 +1,3 @@
-# (c) @AbirHasan2005
-
 import os
 import time
 import string
@@ -9,7 +7,7 @@ import datetime
 import aiofiles
 import traceback
 from configs import Config
-from helpers.database.access_db import db
+from ffmpeg.database.access_db import db
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
 
