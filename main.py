@@ -74,7 +74,7 @@ async def status(_,m: pyrogram.types.messages_and_media.message.Message):
     
 
 
-@app.on_message(filters.private & filters.command("broadcast") & filters.reply & filters.user(Config.BOT_OWNER) & ~filters.edited)
+@app.on_message(filters.private & filters.command("broadcast") & filters.user(Config.BOT_OWNER))
 async def _broadcast(_, m: Message):
     await broadcast_handler(m)
 
