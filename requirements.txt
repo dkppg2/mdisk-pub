@@ -5,3 +5,4 @@ Pillow
 motor
 psutil
 dnspython
+aiofiles
