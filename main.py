@@ -15,6 +15,7 @@ from ffmpeg.access_db import db
 from ffmpeg.add_user import AddUserToDatabase
 from ffmpeg.display_progress import progress_for_pyrogram, humanbytes
 import asyncio
+from ffmpeg.broadcast import broadcast_handler
 
 import mdisk
 import extras
@@ -71,7 +72,13 @@ async def status(_,m: pyrogram.types.messages_and_media.message.Message):
         quote=True
     )
     
-    
+
+
+@app.on_message(filters.private & filters.command("broadcast") & filters.reply & filters.user(Config.BOT_OWNER) & ~filters.edited)
+async def _broadcast(_, m: Message):
+    await broadcast_handler(m)
+
+
 # help command
 @app.on_message(filters.command(["help"]))
 def help(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
