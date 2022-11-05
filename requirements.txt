@@ -2,4 +2,6 @@ pyrogram
 tgcrypto
 requests
 Pillow
-
+motor
+psutil
+dnspython
